@@ -120,18 +120,6 @@ app.get("/get/shops", async(req, res) => {
     }
 });
 
-//seller
-app.get("/seller/shops", async(req, res) => {
-    try {
-        const shops =  Shop.find({}, (err, docs) => {
-            res.send(docs);
-            console.log(docs);
-        });
-    } catch (error) {
-        console.log(error);
-    }
-});
-
 //updating list of items
 app.patch("/updateList", async(req, res) => {
     const nameA = req.body.name;
